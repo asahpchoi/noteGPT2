@@ -7,11 +7,11 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 
 export default function App() {
-  const apiKey = "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";
+  const apiKey = "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";
   const { recording, transcript, startRecording, stopRecording } = useWhisper({
-    apiKey // YOUR_OPEN_AI_TOKEN
+    apiKey, // YOUR_OPEN_AI_TOKEN
   });
-  console.log({ recording });
+  console.log(process.env);
   useEffect(() => {
     console.log(transcript.text);
     //openAICalls(apiKey, transcript.text);
